@@ -1,0 +1,13 @@
+{
+  "name": "park-sg",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20.10" },
+  "scripts": {
+    "start": "node server/index.js",
+    "demo": "node server/index.js --demo",
+    "test": "node --test",
+    "test:live": "node scripts/live-check.js"
+  }
+}

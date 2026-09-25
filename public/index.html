@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Park / SG — HDB carpark availability</title>
+  <meta name="description" content="Explore HDB parking availability across Singapore using data.gov.sg.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a href="#explore" class="skip">Skip to carparks</a>
+  <header><a class="brand" href="/" aria-label="Park SG home"><span class="mark">P</span> PARK <span class="slash">/</span> SG</a><span class="header-note">SINGAPORE · OPEN DATA EXPLORER</span><a href="https://data.gov.sg/datasets/d_ca933a644e55d34fe21f28b8052fac63/view" target="_blank" rel="noreferrer">About the data ↗</a></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">HDB CARPARK AVAILABILITY</p><h1>A little less searching.<br>A lot more space.</h1><p class="subtitle">Explore available parking lots across Singapore.</p></div><div class="update"><span id="badge" class="badge">Connecting</span><p id="updated">Getting the latest snapshot…</p><button id="refresh" class="secondary">↻ Refresh data</button></div></section>
+    <div id="notice" role="status" hidden></div>
+    <section class="stats" aria-label="Summary of filtered results"><article><p>Available lots</p><strong id="available">—</strong><span>Across your selection</span></article><article><p>Carparks</p><strong id="carparks">—</strong><span>Matching your filters</span></article><article><p>Occupied capacity</p><strong id="occupancy">—</strong><span>Weighted by total lots</span></article><article><p>Running low</p><strong id="limited">—</strong><span>Fewer than 20% of lots available</span></article></section>
+    <section id="explore" class="explore"><div class="section-title"><div><p class="eyebrow">FIND YOUR SPACE</p><h2>Explore carparks</h2></div><button id="export" class="secondary" disabled>↓ Export results</button></div>
+      <form id="filters" class="filters"><label class="search">Search carpark code<input id="query" type="search" placeholder="Try AMK, BM or HE12" maxlength="40" autocomplete="off"></label><label>Lot type<select id="type"><option value="C">Cars</option><option value="Y">Motorcycles</option><option value="H">Heavy vehicles</option><option value="all">All lot types</option></select></label><label>Availability<select id="availability"><option value="all">All availability</option><option value="available">Available (≥20%)</option><option value="limited">Limited (&lt;20%)</option><option value="full">Full</option><option value="no capacity">No capacity</option></select></label><label>Sort by<select id="sort"><option value="available">Most available lots</option><option value="ratio">Highest availability %</option><option value="id">Carpark code A–Z</option></select></label></form>
+      <div class="results-meta"><p id="result-count" aria-live="polite">Loading carparks…</p><button id="reset" class="text-button">Reset filters</button></div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Carpark / Lot type</th><th scope="col">Available lots</th><th scope="col">Availability</th><th scope="col">Status</th><th scope="col">Updated · SGT</th></tr></thead><tbody id="rows"></tbody></table></div>
+      <div id="empty" hidden><h3>No matching carparks</h3><p>Try a different code or reset your filters.</p></div>
+      <nav class="pagination" aria-label="Results pages"><span id="page-info">Page 1 of 1</span><div><button id="previous" class="secondary" disabled>← Previous</button><button id="next" class="secondary" disabled>Next →</button></div></nav>
+    </section>
+    <aside><span class="info-icon">i</span><p><strong>A snapshot, not a reservation.</strong> Availability can change before you arrive. Codes identify HDB carparks; this dataset does not include addresses or parking rates. Each row represents one lot type.</p></aside>
+  </main>
+  <footer><span>PARK / SG</span><p>Source: <a href="https://data.gov.sg/datasets/d_ca933a644e55d34fe21f28b8052fac63/view">HDB via data.gov.sg</a> · <a href="https://data.gov.sg/open-data-licence">Singapore Open Data Licence</a></p><span>Times in Singapore (UTC+8)</span></footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{"items":[{"timestamp":"2026-09-25T12:00:00+08:00","carpark_data":[
+{"carpark_number":"AMK1","update_datetime":"2026-09-25T11:59:00","carpark_info":[{"lot_type":"C","total_lots":"200","lots_available":"125"},{"lot_type":"Y","total_lots":"80","lots_available":"24"}]},
+{"carpark_number":"BM29","update_datetime":"2026-09-25T11:59:00","carpark_info":[{"lot_type":"C","total_lots":"100","lots_available":"12"}]},
+{"carpark_number":"HE12","update_datetime":"2026-09-25T11:59:00","carpark_info":[{"lot_type":"C","total_lots":"150","lots_available":"0"}]},
+{"carpark_number":"HLM","update_datetime":"2026-09-25T11:59:00","carpark_info":[{"lot_type":"C","total_lots":"500","lots_available":"320"},{"lot_type":"H","total_lots":"10","lots_available":"3"}]},
+{"carpark_number":"Q81","update_datetime":"2026-09-25T11:59:00","carpark_info":[{"lot_type":"C","total_lots":"0","lots_available":"0"}]}
+]}]}

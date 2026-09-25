@@ -1,0 +1,6 @@
+.git
+.github
+infra
+tests
+node_modules
+*.log
